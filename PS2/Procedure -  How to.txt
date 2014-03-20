@@ -1,0 +1,6 @@
+1) Download CompleteList.htm from http://www.bits-pilani.ac.in:12355/problembankisem1213_Disp2.asp into Webpages folder
+2) Open http://10.10.10.123/PS2/Default.aspx?cached=false&isRedirect=true&DownloadPages=true
+3) Download the pages manually that created problem; eg: SAMSUNG India Software Operations,Bangalore.htm. There is no space between , and location
+4) Modify the line - List of all PS2 Stations as on 22 April, 2012..., change to current date
+5) Open http://10.10.10.123/PS2/Default.aspx?cached=false&isRedirect=true&DownloadPages=false
+6) Save the page as PS2 Stations 2012.htm. Save as Webpage complete in the PS2 folder itself.

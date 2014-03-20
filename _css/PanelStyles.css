@@ -1,0 +1,44 @@
+.Panel_header
+{
+	background-image: url(../_images/Panel_header.png);
+	background-repeat: repeat-x;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+	margin-bottom: -7px;
+	border-left: solid 1px #000;
+	border-right: solid 1px #000;
+}
+.Panel_header_text
+{
+	padding-top: 12px;
+	padding-left: 10px;
+	font-size: 15px; /* font-family: Constantia, Consolas, Verdana, Tahoma, serif; */
+	color: #FFF;
+	font-weight: normal;
+	display: inline-block;
+}
+.Panel_body
+{
+	background: #FFF url(../_images/Panel_Background.gif) bottom left;
+	padding: 5px;
+	border-bottom: solid 1px #000;
+	border-left: solid 1px #000;
+	border-right: solid 1px #000;
+	overflow: hidden;
+}
+.ViewAll
+{
+	max-width: 600px;
+	min-width: 550px;
+	max-height: 500px;
+	text-align: justify;
+}
+.ClickViewAll
+{
+	color: #FFF;
+	text-decoration: none;
+	border-bottom: 1px dashed #FFF;
+	font-size: 12px;
+	margin-left: 20px;
+}

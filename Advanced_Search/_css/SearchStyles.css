@@ -1,0 +1,84 @@
+#Advanced_Search
+{
+	margin: 10px auto;
+	width: 852px;
+}
+#Advanced_Search .Search_Category
+{
+	margin-top: 10px;
+}
+#Advanced_Search .Category_text
+{
+	float: left;
+	margin-left: 15px;
+	width: 80px;
+	margin-bottom: 7px;
+	font-family: Calibri, Arial, Times New Roman;
+}
+#Advanced_Search .Search_Box
+{
+	float: left;
+	margin-left: 25px;
+	margin-bottom: 7px;
+}
+#Advanced_Search .Search_text
+{
+	margin-left: 15px;
+	margin-bottom: 7px;
+}
+#Advanced_Search .Search_Button
+{
+	background-image: url("../../_images/Button.png");
+	background-repeat: repeat-x;
+	width: 80px;
+	height: 31px;
+	font-size: 18px;
+	font-family: Calibri, Arial, Times New Roman;
+	color: #FFF;
+	border: none;
+	position: relative;
+	bottom: 37px;
+	float: right;
+	margin-right: 20px;
+}
+
+.Search_Button:hover
+{
+	cursor: pointer;
+}
+#Search_Result
+{
+	width: 852px;
+	border: none;
+	margin: 0 auto;
+}
+#Search_Result .Panel_body
+{
+	height: 470px;
+	border: #000000 solid 1px;
+	position: relative;
+	z-index: 2;
+}
+#Search_Result .Panel_header
+{
+	position: relative;
+	left: 80px;
+	height: 40px;
+	display: inline-block;
+	padding: 0 10px;
+	font-family: Calibri, Arial, Times New Roman;
+	text-align: center;
+}
+#Search_Result .Panel_header_text
+{
+	padding-top: 10px;
+	padding-left: 0;
+}
+.ellipsis_text
+{
+	word-break: break-all;
+}
+.ErrorLabel 
+{
+	color: Red;
+}

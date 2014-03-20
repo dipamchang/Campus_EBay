@@ -1,0 +1,56 @@
+﻿.Panel_header_text
+{
+	text-transform: capitalize;
+}
+#Category_list
+{
+	width: 855px;
+	margin: 10px auto;
+}
+#Category_list .Panel_body
+{
+	height: 163px;
+}
+.Pages_preference
+{
+	height: 25px;
+	width: 200px;
+	color: Black;
+	font-family: Calibri Arial Times New Roman;
+	font-size: 20px;
+	float: right;
+}
+.Category_list_body
+{
+	width: 130px;
+	float: left;
+	margin: 0px 5px;
+}
+.Category_list_body_images_box
+{
+	width: 130px;
+	height: 100px;
+	margin-bottom: 15px;
+}
+.Category_list_body_images
+{
+	padding-top: 10px;
+	padding-left: 5px;
+	overflow: hidden;
+}
+.Category_list_body_text
+{
+	font-family: Arial Calibri Times New Roman;
+	font-size: 16px;
+	text-align: center;
+}
+.ellipsis_text
+{
+	word-break: break-all;
+}
+.ui-corner-all
+{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}

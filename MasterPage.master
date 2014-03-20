@@ -1,0 +1,321 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Campus eBay</title>
+    <link href="Master_Styles.css" rel="stylesheet" type="text/css" />
+    <link rel="Shortcut Icon" href="icons/Coins.ico" />
+    <script src="../JQuery.js" type="text/javascript"></script>
+    <script src="../_scripts/DialogMaster.js" type="text/javascript"></script>
+    <script src="../_scripts/tooltip.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            //			if (window.location.href.indexOf("Home") > 0) {
+            //				$("#header").css("margin", "-8px auto"); 	// For ticker effect. Part of header hides under clouds ot ticker.
+            //			}
+
+            $("#Search_TextBox").attr("autocomplete", "off");
+            $("#Search_TextBox").bind("focus", function () {
+                if ($(this).val() == "Search...")
+                    $(this).val("");
+            }).bind("blur", function () {
+                if ($(this).val() == "")
+                    $(this).val("Search...");
+            });
+        });
+
+		
+
+    </script>
+    <style type="text/css">
+        .highlight
+        {
+            background-color: Yellow;
+        }
+        .FooterLinks
+        {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 10pt;
+        }
+        .FooterLinks:hover
+        {
+            color: #FFF;
+            border-bottom: 1px dashed #FFF;
+        }
+        #ticker_div p
+        {
+            margin: 5px 0 5px 25px;
+            width: 97% !important;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 12px;
+        }
+        #ticker_div a
+        {
+            color: #FFF;
+            text-decoration: none;
+            border-bottom: solid 1px #FFF;
+        }
+        #ticker_div a:hover
+        {
+            border-bottom: dashed 1px #FFF;
+        }
+        #ticker_div
+        {
+            /*background: rgb(0,0,0);
+			background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(25,26,28,1) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(25,26,28,1)));
+			background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(25,26,28,1) 100%);
+			background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(25,26,28,1) 100%);
+			background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(25,26,28,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#191a1c',GradientType=0 );
+			background: linear-gradient(top, rgba(0,0,0,1) 0%,rgba(25,26,28,1) 100%);*/
+            background: rgb(14,11,9);
+            background: -moz-linear-gradient(top, rgba(14,11,9,1) 0%, rgba(43,34,25,1) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(14,11,9,1)), color-stop(100%,rgba(43,34,25,1)));
+            background: -webkit-linear-gradient(top, rgba(14,11,9,1) 0%,rgba(43,34,25,1) 100%);
+            background: -o-linear-gradient(top, rgba(14,11,9,1) 0%,rgba(43,34,25,1) 100%);
+            background: -ms-linear-gradient(top, rgba(14,11,9,1) 0%,rgba(43,34,25,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e0b09', endColorstr='#2b2219',GradientType=0 );
+            background: linear-gradient(top, rgba(14,11,9,1) 0%,rgba(43,34,25,1) 100%);
+            border-bottom: solid 1px #000;
+            position: relative;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="header_form" runat="server">
+    <div id="ticker_div" runat="server" class="ViewAllBody" style="z-index: 5; color: #FFF;
+        box-shadow: 0 2px 10px #000 !important;">
+    </div>
+    <div id="wrapper">
+        <div id="header">
+            <img src="../_images/Logo.png" style="position: absolute; left: 0; top: 0; z-index: 3;" />
+            <div style="background: #17120e; float: right; padding: 6px;" class="ui-corner-bottom">
+                <asp:TextBox ID="Search_TextBox" runat="server" Text="Search..." Width="280" Height="15"
+                    EnableViewState="true" OnTextChanged="Search_TextBox_TextChanged" ToolTip="Type your keyword(s) and hit enter."
+                    CssClass="ui-corner-all" AutoPostBack="true"></asp:TextBox>
+            </div>
+            <div class="clear">
+            </div>
+            <div style="background: url(../_images/MessageBack.png) no-repeat; width: 181px;
+                height: 54px; float: right; text-align: center; margin: 3px 40px 0 0; padding: 35px 14px 10px 14px;
+                overflow: hidden;" id="Message" runat="server">
+                <a target="_blank" href="../Advanced_Search/Default.aspx" style="color: #FFF; text-decoration: none;
+                    font-size: 1.2em;" title="eBay power!">Advanced Search</a>
+            </div>
+            <a href="http://localhost:49000/PivotViewerDynamicTestPage.aspx" title="Visit Campus eBay v 2.0 Beta \m/"
+                target="_blank" style="text-decoration: none; border: none;">
+                <%--<img src="../_images/Banner_WithChains.png" style="position: absolute; left: 351px;
+					top: -10px;" />--%>
+            </a>
+            <img src="../_images/Bird.png" style="position: absolute; left: 394px; top: 50px;
+                z-index: 5;" />
+            <div class="clear Master_ui-corner-all" style="background: #17120e; font-size: 19px;
+                width: 326px; height: 45px; margin: 80px 0 0 265px; position: absolute;">
+                <a href="../Home/Default.aspx" style="text-decoration: none; color: #FFF; margin-right: 95px;">
+                    <span style="font-size: 31px;">H</span>OME</a> <a href="../Profile_page/Default.aspx"
+                        style="text-decoration: none; color: #FFF;"><span style="font-size: 31px;">P</span>rofile</a>
+            </div>
+            <div class="clear">
+            </div>
+            <span style="float: right; margin-top: 3px; margin-right: 10px; height: 20px;">
+                <asp:Label ID="UserWelcomeLabel" runat="server" Text="" Font-Names="Calibri, Arial, Serif"
+                    Font-Bold="True" EnableViewState="False" Font-Size="17px"></asp:Label>&nbsp;&nbsp;
+                <asp:LinkButton ID="logout" runat="server" Text="Logout" CssClass="logout" OnClick="logout_Click"></asp:LinkButton>
+            </span>
+            <div class="clear">
+            </div>
+            <!--<div id="PS2Link" style="padding: 10px; margin: 20px auto 5px auto; background: #FFF url(../_images/Panel_Background.gif) bottom center;
+                width: 600px; border-radius: 5px;">
+                <asp:HyperLink ID="PSList" runat="server" NavigateUrl="~/PS2/PS2 Stations 2012.htm" Target="_blank" ToolTip="Click to analyze PS2 stations 2012!!!">PS 2 Stations Sem 1 - 2012 :) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW!!!</asp:HyperLink>
+            </div>-->
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="BodyContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer" style="height: 233px; padding: 20px; text-align: center;">
+        <p>
+            &larr; Uploads from A WING HOSTELS &rarr;</p>
+        <a href="../Advanced_Search/Default.aspx?Hostel=AH 1" title="Click to see items uploaded by AH 1">
+            <img src="../_images/FooterImage (1).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 2" title="Click to see items uploaded by AH 2">
+            <img src="../_images/FooterImage (2).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 3" title="Click to see items uploaded by AH 3">
+            <img src="../_images/FooterImage (3).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 4" title="Click to see items uploaded by AH 4">
+            <img src="../_images/FooterImage (4).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 5" title="Click to see items uploaded by AH 5">
+            <img src="../_images/FooterImage (5).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 6" title="Click to see items uploaded by AH 6">
+            <img src="../_images/FooterImage (6).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 7" title="Click to see items uploaded by AH 7">
+            <img src="../_images/FooterImage (7).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=AH 8" title="Click to see items uploaded by AH 8">
+            <img src="../_images/FooterImage (8).jpg" />
+        </a>
+        <br />
+        <p>
+            &larr; Uploads from C WING HOSTELS &rarr;</p>
+        <a href="../Advanced_Search/Default.aspx?Hostel=CH 1" title="Click to see items uploaded by CH 1">
+            <img src="../_images/FooterImage (3).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=CH 2" title="Click to see items uploaded by CH 2">
+            <img src="../_images/FooterImage (1).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=CH 3" title="Click to see items uploaded by CH 3">
+            <img src="../_images/FooterImage (4).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=CH 4" title="Click to see items uploaded by CH 4">
+            <img src="../_images/FooterImage (2).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=CH 5" title="Click to see items uploaded by CH 5">
+            <img src="../_images/FooterImage (6).jpg" />
+        </a><a href="../Advanced_Search/Default.aspx?Hostel=CH 6" title="Click to see items uploaded by CH 6">
+            <img src="../_images/FooterImage (8).jpg" />
+        </a>
+        <%--<p style="padding: 5px; background-color: #211a14;">
+				Hostel Wise Products
+			</p>
+			<div style="color: Black; margin: 5px 10px; font-weight: bolder;">
+				<p>
+					A Wing: <a href="../Advanced_Search/Default.aspx?Hostel=AH 1" title="Click to see items uploaded by AH 1">
+						AH 1</a> | <a title="Click to see items uploaded by AH 2" href="../Advanced_Search/Default.aspx?Hostel=AH 2">
+							AH 2</a> | <a title="Click to see items uploaded by AH 3" href="../Advanced_Search/Default.aspx?Hostel=AH 3">
+								AH 3</a> | <a title="Click to see items uploaded by AH 4" href="../Advanced_Search/Default.aspx?Hostel=AH 4">
+									AH 4</a> | <a title="Click to see items uploaded by AH 5" href="../Advanced_Search/Default.aspx?Hostel=AH 5">
+										AH 5</a> | <a title="Click to see items uploaded by AH 6" href="../Advanced_Search/Default.aspx?Hostel=AH 6">
+											AH 6</a> | <a title="Click to see items uploaded by AH 7" href="../Advanced_Search/Default.aspx?Hostel=AH 7">
+												AH 7</a> | <a title="Click to see items uploaded by AH 8" href="../Advanced_Search/Default.aspx?Hostel=AH 8">
+													AH 8</a> |
+				</p>
+				<p>
+					C Wing: <a title="Click to see items uploaded by CH 1" href="../Advanced_Search/Default.aspx?Hostel=CH 1">
+						CH 1</a> | <a title="Click to see items uploaded by CH 2" href="../Advanced_Search/Default.aspx?Hostel=CH 2">
+							CH 2</a> | <a title="Click to see items uploaded by CH 3" href="../Advanced_Search/Default.aspx?Hostel=CH 3">
+								CH 3</a> | <a title="Click to see items uploaded by CH 4" href="../Advanced_Search/Default.aspx?Hostel=CH 4">
+									CH 4</a> | <a title="Click to see items uploaded by CH 5" href="../Advanced_Search/Default.aspx?Hostel=CH 5">
+										CH 5</a> | <a title="Click to see items uploaded by CH 6" href="../Advanced_Search/Default.aspx?Hostel=CH 6">
+											CH 6</a> |
+				</p>
+			</div>
+			<p style="background-color: #000; text-align: right; padding: 5px 70px 5px 0;">
+				Copyrights &copy; 2011
+			</p>--%>
+    </div>
+    <p style="background-color: #000; padding: 5px 20px 5px 20px; color: #FFF;">
+        <a href="../Misc%20Pages/FeedBack_Contact.aspx#Developers" class="FooterLinks">Developers</a>
+        | <a href="../Misc%20Pages/FeedBack_Contact.aspx#Feedback" class="FooterLinks">Feedback</a>
+        | <a href="../Misc%20Pages/FeedBack_Contact.aspx#Contact" class="FooterLinks">Contact</a>
+        | <a href="../Misc%20Pages/FeedBack_Contact.aspx#Acknowledgements" class="FooterLinks">
+            Acknowledgements</a> <span style="float: right; margin-right: 30px;">Copyrights &copy;
+                2011</span> <span style="clear: both">&nbsp;</span>
+    </p>
+    </form>
+    <div id="personPopupContainer">
+        <table width="" border="0" cellspacing="0" cellpadding="0" align="center" class="personPopupPopup">
+            <tr>
+                <td class="corner topLeft">
+                </td>
+                <td class="top">
+                </td>
+                <td class="corner topRight">
+                </td>
+            </tr>
+            <tr>
+                <td class="left">
+                </td>
+                <td>
+                    <div id="personPopupContent">
+                        <table width="100%" border="0" cellspacing="5" cellpadding="0">
+                            <tr>
+                                <td align="left">
+                                    <a id="popClose" href="javascript:void(0)" title="Close"></a>
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td align="right">
+                                    &rarr; <a id="popFollowMe" title="Follow to get item updates as SMS!">Log in to follow/unfollow</a>
+                                </td>
+                            </tr>
+                            <tr valign="top">
+                                <td rowspan="6">
+                                    <div class="personPopupImage">
+                                        <img src="../profile_images/default.jpg" alt="Loading..." name="popImage" width="100"
+                                            id="popImage" /></div>
+                                </td>
+                                <td>
+                                    <strong>Name</strong>
+                                </td>
+                                <td>
+                                    <span id="popName">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Hostel</strong>
+                                </td>
+                                <td>
+                                    <span id="popHostel">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Room</strong>
+                                </td>
+                                <td>
+                                    <span id="popRoom">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>BITS ID</strong>
+                                </td>
+                                <td>
+                                    <span id="popBITSID">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Phone</strong>
+                                </td>
+                                <td>
+                                    <span id="popPhone">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>User since</strong>
+                                </td>
+                                <td>
+                                    <span id="popDate">Loading...</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    &rarr; Click to see the items uploaded by this user.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td class="right">
+                </td>
+            </tr>
+            <tr>
+                <td class="corner bottomLeft">
+                    &nbsp;
+                </td>
+                <td class="bottom">
+                    &nbsp;
+                </td>
+                <td class="corner bottomRight">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

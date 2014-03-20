@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin_Pages.master.cs"
+	Inherits="Admin_Pages_Admin_Pages" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Welcome eBay Admin</title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<style type="text/css">
+		*
+		{
+			font-family: 'Segoe UI' ,Verdana,Arial;
+			padding: 0;
+			margin: 0;
+		}
+		div div
+		{
+			margin: 5px;
+		}
+		.gridviewPadding
+		{
+			padding: 3px;
+		}
+	</style>
+</head>
+<body>
+	<form id="myform" runat="server">
+	<div id="Admin_Wrapper">
+		<asp:SiteMapDataSource ID="AdminPages_SiteMapDataSource" runat="server" />
+		<%--Header--%>
+		<center style="margin-top: 10px;">
+			<h1>
+				<a style="text-decoration: none; color: #000" href="../Home/Default.aspx" target="_blank">
+					Campus eBay</a> : Admin Page
+			</h1>
+			<p style="text-align: right; margin-right: 100px;">
+				<asp:LinkButton ID="LogoutAdmin_LinkButton" runat="server" OnClick="LogoutAdmin_LinkButton_Click">Logout</asp:LinkButton>
+			</p>
+			<br />
+			<hr width="75%" />
+		</center>
+		<%--Body--%>
+		<div style="margin-top: 20px;">
+			<div style="width: 20%; overflow: hidden; float: left; border-right: 1px solid #000;
+				border-top: 1px solid #000; padding-bottom: 50px;">
+				<asp:TreeView ID="AvailablePages_TreeView" runat="server" ImageSet="Arrows" DataSourceID="AdminPages_SiteMapDataSource"
+					ShowLines="True">
+					<HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+					<NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px"
+						NodeSpacing="0px" VerticalPadding="0px" />
+					<ParentNodeStyle Font-Bold="False" />
+					<SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+						VerticalPadding="0px" />
+				</asp:TreeView>
+			</div>
+			<div style="width: 70%; float: left; padding: 5px;">
+				<asp:ContentPlaceHolder ID="AdminPages" runat="server">
+				</asp:ContentPlaceHolder>
+			</div>
+			<div style="clear: left">
+			</div>
+		</div>
+		<%--Footer--%>
+		<p style="text-align: center; padding: 5px; color: #FFF; background: #000; width: 99%;
+			margin: 0 auto;">
+			Copyrights © 2013
+		</p>
+	</div>
+	</form>
+</body>
+</html>

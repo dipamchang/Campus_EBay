@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Available Admin Pages"  description="">
+    <siteMapNode url="~/Admin_Pages/ErrorList.aspx" title="Error List"  description="Manage Errors of Site." />
+    <siteMapNode url="~/Admin_Pages/FeedBack.aspx" title="Feedbacks List"  description="See Feedbacks." />
+    <siteMapNode url="~/Admin_Pages/UploadedItems.aspx" title="Items List"  description="See Items Uploaded." />
+    <siteMapNode url="~/Admin_Pages/LAF_List.aspx" title="LAF List"  description="See all LAF Items." />
+    <siteMapNode url="~/Admin_Pages/Notices_List.aspx" title="Notices List"  description="See all Notice Items." />
+    <siteMapNode url="~/Admin_Pages/Tickers.aspx" title="Tickers"  description="Play wid Tickers" />
+    <siteMapNode url="~/Admin_Pages/RunAQuery.aspx" title="Run Query"  description="Very Sensitive. Be very careful!" />
+  </siteMapNode>
+</siteMap>

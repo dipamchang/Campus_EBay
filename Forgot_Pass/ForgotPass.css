@@ -1,0 +1,55 @@
+﻿.Panel
+{
+	margin: 6px 8px;
+}
+
+.Panel_header
+{
+	position: relative;
+	left: 40px;
+	height: 40px;
+	display: inline-block;
+	padding: 0 10px;
+	text-align: center;
+}
+.Button
+{
+	background-image: url("../_images/Button.png");
+	background-repeat: repeat-x;
+	width: 100px;
+	height: 31px;
+	font-size: 18px;
+	color: #FFF;
+	border: none;
+	font-family: Calibri, Arial, Times New Roman;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.Button:hover
+{
+	cursor: pointer;
+}
+.Success
+{
+	color: Green;
+}
+.Fail
+{
+	color: Red;
+}
+.SText
+{
+	width: 300px;
+}
+.default
+{
+	color: Gray;
+	font-size: 12px;
+	font-style: italic;
+}
+.hasText
+{
+	color: #222;
+	font-size: 14px;
+	font-style: normal;
+}

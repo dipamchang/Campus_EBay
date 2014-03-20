@@ -1,0 +1,124 @@
+﻿.Panel
+{
+	margin: 6px 8px;
+}
+
+a
+{
+	text-decoration: none;
+	border: 0;
+}
+
+a:hover
+{
+	color: Red;
+}
+
+#topPanels
+{
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+#Higginbothams_Updates, #Category_list, #SignIn
+{
+	width: 424px;
+	float: left;
+}
+
+#Students_Updates
+{
+	float: left;
+	width: 862px;
+}
+
+#Higginbothams_Updates .Panel_body, #Students_Updates .Panel_body
+{
+	height: 160px;
+}
+#middlePanels
+{
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+#Category_list .Panel_body, #SignIn .Panel_body
+{
+	height: 145px;
+}
+#Notices
+{
+	width: 864px;
+	float: right;
+	margin-right: 13px;
+	background: #FFF;
+}
+#Notices .Panel_header
+{
+	top: 0;
+}
+#Notices .Panel_body, #LostAndFound .Panel_body
+{
+	font-size: 14px;
+}
+
+#LostAndFound
+{
+	width: 49%;
+	float: left;
+	margin: 0;
+	position: relative;
+	z-index: 2;
+	top: 6px;
+	left: 8px;
+}
+#LostAndFound .Panel_body
+{
+	height: 185px;
+}
+#Views
+{
+	width: 864px;
+	float: right;
+	margin-right: 13px;
+}
+#Views .Panel_body
+{
+	height: 200px;
+}
+.ui-corner-all
+{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#Cabs
+{
+	width: 865px;
+	margin-left: 22px;
+}
+
+#Cabs .Panel_body table
+{
+	text-transform: capitalize;
+	padding: 25px;
+}
+#Cabs td, th
+{
+	padding: 5px;
+}
+
+#Cabs th
+{
+	border-bottom: 2px dashed #FFF;
+	text-decoration: underline;
+}
+
+.ui-dialog table
+{
+	font-size: 14px;
+}
+
+.CategoryAnimatePosition
+{
+	position: absolute;
+}

@@ -1,0 +1,4 @@
+vti_encoding:SR|utf8-nl
+javascript\:loadhelpfront();:localstart.asp
+javascript\:activate(<%=iver%>);:localstart.asp
+/iishelp/common/colegal.htm:localstart.asp

@@ -1,0 +1,303 @@
+html, body, h1, h2, h3, h4, ul, li {
+	margin: 0;
+	padding: 0;
+}
+h1 img {
+	display: block;
+}
+img {
+	border: 0;
+}
+a {
+	color: #000099;
+}
+a:hover {
+	color: #FFA405;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.more {
+	text-align: right;
+}
+.clear {
+	clear: both;
+}
+
+body {
+	background: #C4AFD8 url(images/finpsd_02.jpg) repeat-x;
+	text-align: center;
+	font: 11px verdana, arial, sans-serif;
+	color: #000033;
+	padding-bottom: 10px;
+
+}
+table
+{
+border-collapse:collapse;
+}
+#newwrapper{
+    
+	position:relative;
+	margin: auto;
+	
+	width: 100%;
+	}
+
+/** layout **/
+#wrapper {
+	background:#D8C9E6 left url(images/finpsd_07.jpg) repeat-y;
+	text-align: left;
+	margin: auto;
+	width: 872px;
+	position: relative;
+	font-family: "Palatino Linotype";
+	
+  }
+#wrappertop{
+height:170px;
+width:100%;
+}
+#header {
+
+  height: 273px;
+  background: url(images/Untitled-2.swf) no-repeat;
+}
+
+#left {
+   
+  float: left;
+  width: 195px;
+height:inherit;
+}
+#logo {
+  width: 195px;
+ 
+  height: 260px;
+  background: url(images/finpsd1_04.jpg) no-repeat;
+  text-align: center;
+  color: #595959;
+}
+
+
+
+#nav {
+background: bottom left url(images/finpsd_07.jpg) no-repeat;
+	width: 195px;
+	margin-top: 3em;
+	
+	}
+#nav ul {
+  margin-left: 10px;
+ 
+  background: #0a0a0a ;
+  
+}
+#nav li {
+
+	list-style: none;
+	border-top: 2px solid #6f4b71;
+	
+
+	padding: 7px 0 0 20px;
+	font: 11px Verdana, Arial, Helvetica, sans-serif  ;
+}
+#nav a {
+  color: #f7eef3;
+  text-decoration: none;
+  border-left: 2px solid #6f4b71;
+  padding-left: 10px;
+  display: block;
+  width: 90%;
+  padding: 2px 0 6px 10px;
+}
+#nav a:hover {
+  text-decoration:underline;
+
+  color:#DDCBBA;
+  
+}
+
+
+#news {
+	
+	padding-bottom: 3px;
+	text-align: center;
+	background: #D8C9E6 url(images/finpsd_07.jpg) repeat-y; 
+    
+}
+#news h2 {
+  font-size: 12px;
+  color: #BE8B06;
+}
+#news h3, #news p {
+  font-size: 11px;
+  margin: 1em 8px 1em 0;
+}
+#news a {
+  color: #e6c1e7;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#news a:hover {
+  color: #D8C9E6;
+}
+#news .more {
+  font-size: 9px;
+}
+#news .hr-dots {
+  background: center url(images/dots.gif) repeat-x;
+  height: 10px;
+}
+#righttop{
+background: left top url(images/finpsd_40.jpg) no-repeat;
+height:150px;
+margin-left:-2px;
+
+}
+
+
+#rightnext{
+    float: right;
+	width: 677px;
+    background: url(images/finpsd123_06extra.jpg) repeat-y;
+	
+	height:auto;
+	}
+	#rightnext h2 {
+  font: 12px times new roman;
+  color: #000000;
+  border-bottom: 2px solid #D8C9E6;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  padding-right: 20px;
+    margin-bottom: 2em;
+}
+#rightnext h1{
+	font-size: 19px;
+	color: #000066;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#right {
+	float: right;
+	width: 677px;
+	
+	background: url(images/finpsd123_06extra.jpg) repeat-y;
+	height:450px;
+	 margin-top: 150px;
+}
+#right h2 {
+  font: 12px times new roman;
+  color: #000000;
+  border-bottom: 2px solid #D8C9E6;
+  margin-left: 20px;
+  margin-right:  9px;
+  padding-right: 20px;
+  padding-top: 10px;
+    margin-bottom: 4em;
+}
+#right h3 {
+  font: 14px arial, sans-serif;
+  color: #000000;
+  border-bottom: 2px solid #D8C9E6;
+  padding-bottom: 6px;
+  margin-bottom: 4em;
+  margin-right:  9px;
+  margin-left: 20px;
+  margin-top: 1em;
+}
+#welcome {
+	padding-left: 40px;
+	margin-right: 20px;
+	font-size: 12px;
+	height:400px;
+}
+#mainwelcome {
+	padding-left: 40px;
+	margin-right: 20px;
+}
+
+#profile {
+  margin-right: 16px;
+  padding-left: 30px;
+
+}
+#right .left {
+  margin-right: 18px;
+}
+#right .more {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+#corp  {
+  float: left;
+  width: 48%;
+}
+#indu {
+	float:right;
+	width:49%;
+	}
+#corp {
+  margin-right: 1%;
+}
+#corp-img, #indu-img {
+  background: url(images/finpsd_16.jpg) no-repeat;
+  width: 112px;
+  height: 23px;
+  float: left;
+  margin-right: 18px;
+  text-align: center;
+  padding-top: 90px;
+  font-size: 9px;
+  font-weight: bold;
+}
+#indu-img {
+  background: url(images/finpsd_19extra3.jpg) no-repeat;
+}
+#spacer {
+  height: 2em;
+}
+#firstfooter {
+	background: url(images/finpsd_28.jpg) no-repeat;
+	height:11px;
+	margin-top:0px;
+	display:block;
+	font-size:1px;
+	}
+	
+#footer {
+
+  background: url(images/finpsd_27copytry.jpg) repeat-y;
+}
+#copyright {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	padding: 10px 17px 3px 00px;
+	font-size: 12px;
+	color: #000066;
+	line-height: 1pt;
+
+}
+#copyright a
+{
+color: #000099;
+ text-decoration: none;
+}
+#copyright a:hover{
+  text-decoration:underline;
+
+  color:#001122;
+  
+}
+#footerline{
+	background: url(images/finpsd_29.jpg) no-repeat;
+	height:12px;
+	margin-top:0px;
+	display:block;
+	font-size:1px;
+}

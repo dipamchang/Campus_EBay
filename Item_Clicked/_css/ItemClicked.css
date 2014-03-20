@@ -1,0 +1,47 @@
+#Item_Clicked
+{
+	margin: 10px auto;
+	width: 852px;
+}
+#Item_Clicked .Item_details_image
+{
+	width: 100px;
+	height: 100px;
+	border-color: #FFF;
+	overflow: hidden;
+}
+#Item_Clicked .Item_Clicked_body_text
+{
+	float: left;
+	width: 83%;
+	overflow: hidden;
+	margin-left: 25px;
+	font-family: Calibri, Arial, Times New Roman;
+}
+#Item_Clicked .Item_Clicked_body_temp
+{
+	clear: both;
+}
+#Item_Clicked .Item_Clicked_name
+{
+	overflow: hidden;
+	margin: 5px 0 0 0px;
+}
+#Item_Clicked .Item_Clicked_message
+{
+	float: right;
+	color: #FFF;
+	padding-bottom: 3px;
+	background: url("../../_images/Button.png") repeat-x #000;
+	width: 111px;
+	height: 33px;
+	margin-top: 20px;
+}
+.Item_Clicked_message:hover
+{
+	cursor: pointer;
+}
+.ellipsis_text
+{
+	word-break: break-all;
+}
